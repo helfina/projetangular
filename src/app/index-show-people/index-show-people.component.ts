@@ -7,7 +7,7 @@ import {HttpClient} from "@angular/common/http";
   styleUrls: ['./index-show-people.component.css']
 })
 export class IndexShowPeopleComponent implements OnInit {
-  characters: any = [];
+  detailsPeoples: any = [];
   peoples: any = [];
   constructor(private httpService: HttpClient) { }
 
@@ -20,30 +20,29 @@ export class IndexShowPeopleComponent implements OnInit {
     this.httpService
       .get('https://swapi.dev/api/people')
       .subscribe(peoples => {
-        this.characters = peoples;
+        this.detailsPeoples = peoples;
 
-        if(this.characters.next != null){
+        if(this.detailsPeoples.next != null){
 
-          let countPages = Math.ceil(this.characters.count / 10);
+          let countPages = Math.ceil(this.detailsPeoples.count / 10);
 
           for (let index = 1; index <= countPages; index++ ){
             this.httpService.get('https://swapi.dev/api/people/?page=' + index ).subscribe(pageOfPeople =>{
-              this.characters = pageOfPeople;
+               this.detailsPeoples = pageOfPeople;
 
-              this.characters.results.forEach((result: any) =>
+              this.detailsPeoples.results.forEach((result: any) =>
               {
-                this.peoples = this.peoples.concat(result);
+              this.peoples = this.peoples.concat(result);
 
               });
-
+              console.log(this.peoples.length)
             });
-
 
           }
 
         }else{
 
-          this.characters.results.forEach((result: any) =>
+          this.detailsPeoples.results.forEach((result: any) =>
           {
             this.peoples = result;
           });
