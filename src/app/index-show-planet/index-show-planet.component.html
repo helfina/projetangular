@@ -29,57 +29,13 @@
         <thead>
         <tr>
           <th>Nom</th>
-          <th>Sexe</th>
+          <th>Terrain</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Mal</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Mal</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Mal</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Mal</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Mal</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Mal</td>
-        </tr>
-        <tr>
-          <td>Courtney Henry</td>
-          <td>Mal</td>
+        <tr *ngFor="let planet of planets">
+          <td>{{planet.name}}</td>
+          <td>{{planet.terrain}}</td>
         </tr>
         </tbody>
       </table>
