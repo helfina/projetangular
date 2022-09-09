@@ -9,6 +9,9 @@ import { IndexShowPlanetComponent } from './index-show-planet/index-show-planet.
 import {HttpClientModule} from "@angular/common/http";
 import { IndexShowPeopleComponent } from './index-show-people/index-show-people.component';
 import { IndexShowVehiclesComponent } from './index-show-vehicles/index-show-vehicles.component';
+import { IndexPlanetsComponent } from './index-planets/index-planets.component';
+import { IndexPeoplesComponent } from './index-peoples/index-peoples.component';
+import { IndexVehiclesComponent } from './index-vehicles/index-vehicles.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { IndexShowVehiclesComponent } from './index-show-vehicles/index-show-veh
     HomePageComponent,
     IndexShowPlanetComponent,
     IndexShowPeopleComponent,
-    IndexShowVehiclesComponent
+    IndexShowVehiclesComponent,
+    IndexPlanetsComponent,
+    IndexPeoplesComponent,
+    IndexVehiclesComponent
   ],
   imports: [
     BrowserModule,
